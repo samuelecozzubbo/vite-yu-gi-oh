@@ -18,6 +18,23 @@ export default {
       store,
     }
   },
+  methods: {
+    getCharacters() {
+      axios.
+        get(store.apiUrl)
+        .then(results => {
+          console.log(results.data.data);
+          store.CharactersList = results.data.data;
+          store.loading = false;
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }
+  },
+  created() {
+    this.getCharacters();
+  }
 }
 </script>
 
