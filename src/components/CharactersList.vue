@@ -20,10 +20,16 @@ export default {
 </script>
 
 <template>
-  <section class="card-counter container"></section>
-  <section class="card-list container">
+  <section class="container pt-4">
+    <div class="row ">
+      <div class="col-12">
+        <div class="px-2 card-counter">Found {{ store.charactersList.length }} cards</div>
+      </div>
+    </div>
+  </section>
+  <section class="card-list container pb-4">
     <div class="row">
-      <div v-for="(character, i) in store.charactersList" :key="i" class="col-6 col-md-3 col-lg-2 mb-2 gx-2">
+      <div v-for="(character, i) in store.charactersList" :key="i" class="col-6 col-md-3 col-lg-2 mb-2">
         <!-- Card singola -->
         <SingleCharacters :info="character" />
       </div>
@@ -32,7 +38,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.card-list {
+.container {
   background-color: white;
+}
+
+.card-counter {
+  background-color: #212529;
+  color: white;
 }
 </style>
