@@ -24,7 +24,7 @@ export default {
         get(store.apiUrl)
         .then(results => {
           console.log(results.data.data);
-          store.CharactersList = results.data.data;
+          store.charactersList = results.data.data;
           store.loading = false;
         })
         .catch(err => {
