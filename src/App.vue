@@ -47,4 +47,8 @@ export default {
 
 <style lang="scss">
 @use './styles/general.scss';
+
+main {
+  padding-top: 30px;
+}
 </style>

@@ -23,9 +23,9 @@ export default {
   <section class="card-counter container"></section>
   <section class="card-list container">
     <div class="row">
-      <div v-for="character in store.charactersList" class="col-6 col-md-4 col-lg-3 mb-2">
+      <div v-for="(character, i) in store.charactersList" :key="i" class="col-6 col-md-3 col-lg-2 mb-2 gx-2">
         <!-- Card singola -->
-        <SingleCharacters />
+        <SingleCharacters :info="character" />
       </div>
     </div>
   </section>

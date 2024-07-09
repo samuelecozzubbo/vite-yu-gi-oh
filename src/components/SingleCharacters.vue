@@ -1,14 +1,15 @@
 <script>
 export default {
     name: "SingleCharacters",
+    props: ['info'],
 }
 </script>
 
 <template>
     <div class="character text-center">
-        <img class="img-fluid mb-3" src="https://i.ebayimg.com/images/g/B5YAAOxynhFRC~o4/s-l400.jpg" alt="info.name">
-        <h4>"A" CELL BREEDING DEVICE</h4>
-        <div>Alien</div>
+        <img class="img-fluid mb-3" :src="info.card_images[0].image_url" alt="info.name">
+        <h4>{{ info.name }}</h4>
+        <div>{{ info.archetype }}</div>
     </div>
 </template>
 
@@ -19,7 +20,14 @@ img {
     max-width: 100%;
 }
 
+h4 {
+    color: white;
+    font-size: 1em;
+}
+
 .character {
     background-color: #D48F38;
+    padding-bottom: 10px;
+    height: 350px;
 }
 </style>
