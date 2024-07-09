@@ -25,9 +25,47 @@ export default {
     <div class="row">
       <div class="col-6 col-md-4 col-lg-3 mb-2">
         <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <!-- Test carte -->
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-2">
+        <!-- Card singola -->
+        <SingleCharacters />
       </div>
     </div>
   </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card-list {
+  background-color: white;
+}
+</style>

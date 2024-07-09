@@ -23,6 +23,9 @@ export default {
 
 <template>
   <AppHeader message="Yu-Gi-Oh Api" />
+  <main>
+    <CharactersList />
+  </main>
 </template>
 
 <style lang="scss">
