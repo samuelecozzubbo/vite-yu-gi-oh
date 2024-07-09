@@ -28,6 +28,5 @@ h4 {
 .character {
     background-color: #D48F38;
     padding-bottom: 10px;
-    height: 350px;
 }
 </style>

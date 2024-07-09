@@ -29,7 +29,8 @@ export default {
   </section>
   <section class="card-list container pb-4">
     <div class="row">
-      <div v-for="(character, i) in store.charactersList" :key="i" class="col-6 col-md-3 col-lg-2 mb-2">
+      <div v-for="(character, i) in store.charactersList" :key="i"
+        class="col-6 col-md-3 col-lg-2 mb-2 d-flex align-items-stretch">
         <!-- Card singola -->
         <SingleCharacters :info="character" />
       </div>
