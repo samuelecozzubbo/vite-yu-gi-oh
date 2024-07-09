@@ -22,6 +22,7 @@ export default {
 </script>
 
 <template>
+  <AppHeader message="Yu-Gi-Oh Api" />
 </template>
 
 <style lang="scss">
