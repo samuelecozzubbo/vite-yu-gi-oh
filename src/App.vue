@@ -24,6 +24,7 @@ export default {
   methods: {
     getCharacters() {
       let endPoint = store.apiUrl;
+      store.loading = true;
       //Ricerca personalizzata per archetipi
       if(store.archetypeSelect){
         endPoint += `archetype=${store.archetypeSelect}`;
@@ -38,6 +39,9 @@ export default {
         })
         .catch(err => {
           console.log(err);
+          store.loading=false;
+          //svuoto array
+          store.charactersList = [];
         })
     }
   },

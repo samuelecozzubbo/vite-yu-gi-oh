@@ -28,13 +28,14 @@ export default {
     </div>
   </section>
   <section class="card-list container pb-4">
-    <div class="row">
+    <div v-if="!store.loading" class="row">
       <div v-for="(character, i) in store.charactersList" :key="i"
         class="col-6 col-md-3 my-col-lg-12-5 mb-2 d-flex align-items-stretch">
         <!-- Card singola -->
         <SingleCharacters :info="character" />
       </div>
     </div>
+    <AppLoader v-else label="Yu-gi-oh"/>
   </section>
 </template>
 
