@@ -43,10 +43,24 @@ export default {
           //svuoto array
           store.charactersList = [];
         })
-    }
+    },
+    getArchetypes() {
+      axios
+        .get(store.archetypesUrl)
+        .then(results => {
+          console.log("archetipi");
+          console.log(results.data);
+          store.archetypes= results.data;
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    },
+
   },
   created() {
     this.getCharacters();
+    this.getArchetypes();
   }
 }
 </script>
