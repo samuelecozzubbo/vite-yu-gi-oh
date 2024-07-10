@@ -4,14 +4,17 @@ import axios from 'axios';
 
 import AppHeader from './components/AppHeader.vue';
 import CharactersList from './components/CharactersList.vue';
+import AppSearch from './components/AppSearch.vue';
 //import state management store
 import { store } from './store';
+
 
 export default {
   name: "App",
   components: {
     AppHeader,
     CharactersList,
+    AppSearch,
   },
   data() {
     return {
@@ -20,8 +23,14 @@ export default {
   },
   methods: {
     getCharacters() {
+      let endPoint = store.apiUrl;
+      //Ricerca personalizzata per archetipi
+      if(store.archetypeSelect){
+        endPoint += `archetype=${store.archetypeSelect}`;
+        console.log(endPoint);
+      }
       axios.
-        get(store.apiUrl)
+        get(endPoint)
         .then(results => {
           console.log(results.data.data);
           store.charactersList = results.data.data;
@@ -41,6 +50,7 @@ export default {
 <template>
   <AppHeader message="Yu-Gi-Oh Api" />
   <main>
+    <AppSearch @search="getCharacters"/>
     <CharactersList />
   </main>
 </template>
